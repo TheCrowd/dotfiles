@@ -1,0 +1,150 @@
+
+  {
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    //faster navigation
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    //enter viusal block mode
+    {
+      "before": ["<Leader>", "v"],
+      "after": ["<C-v>"]
+    },
+    // remapping Join line command
+    {
+      "before": ["<Leader>", "j"],
+      "after": ["J"]
+    },
+    {
+      "before": ["<Leader>", "e"],
+      "after": ["$"]
+    },
+    {
+      "before": ["<Leader>", "s"],
+      "after": ["^"]
+    },
+    //remapping split switching
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    //dont copy when delete
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["d", "d"],
+      "after": ["\"", "_", "d", "d"]
+    },
+    // copy when start with lead
+    {
+      "before": ["<Leader>", "d"],
+      "after": ["d"]
+    },
+    {
+      "before": ["<Leader>", "d", "d"],
+      "after": ["d", "d"]
+    },
+    //paste in newline
+    {
+      "before": ["<Leader>", "<Leader>", "p"],
+      "after": ["o", "<Esc>", "p"]
+    },
+    //remapping remove highlights
+    {
+      "before": ["<Leader>", "/"],
+      "commands": [":noh"]
+    },
+    //redo
+    {
+      "before": ["<Leader>", "r"],
+      "after": ["<C-r>"]
+    },
+    {
+      "before": ["<Leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<Leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<Leader>", "t"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    //remapping tab commands
+    {
+      "before": ["<Leader>", "t", "t"],
+      "commands": [":tabnew"]
+    },
+    {
+      "before": ["<Leader>", "t", "n"],
+      "commands": [":tabnext"]
+    },
+    {
+      "before": ["<Leader>", "t", "p"],
+      "commands": [":tabprev"]
+    },
+    {
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-r>": false,
+    "<C-b>": false,
+    "<C-c>": false
+  },
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#8FBCBB", "#000"],
+  "vim.statusBarColors.insert": ["#BF616A", "#000"],
+  "vim.statusBarColors.visual": ["#B48EAD", "#000"],
+  "vim.statusBarColors.visualline": ["#B48EAD", "#000"],
+  "vim.statusBarColors.visualblock": ["#A3BE8C", "#000"],
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC"
+}
