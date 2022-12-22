@@ -17,6 +17,17 @@
     "when": "neovim.mode == insert && editorTextFocus",
     "args": "k"
   },
+  {
+    "command": "workbench.action.previousEditor",
+    "key": "shift+h",
+    "when": "neovim.mode!=insert"
+  },
+  {
+    "command": "workbench.action.nextEditor",
+    "key": "shift+l",
+    "when": "neovim.mode!=insert"
+  },
+
   //Sidebar Keybindings
   {
     "key": "r",
@@ -57,5 +68,10 @@
     "key": "shift+a",
     "command": "explorer.newFolder",
     "when": "filesExplorerFocus && !inputFocus"
-  }
+  },
+  //better navigation
+  { "key": "ctrl+h", "command": "workbench.action.navigateLeft" },
+  { "key": "ctrl+l", "command": "workbench.action.navigateRight" },
+  { "key": "ctrl+j", "command": "workbench.action.navigateDown" },
+  { "key": "ctrl+k", "command": "workbench.action.navigateUp" }
 ]
