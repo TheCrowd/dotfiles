@@ -31,6 +31,10 @@ keymap('x', '<C-h>', ':call VSCodeNotify("workbench.action.navigateLeft")<CR>', 
 keymap('n', '<C-l>', ':call VSCodeNotify("workbench.action.navigateRight")<CR>', opts)
 keymap('x', '<C-l>', ':call VSCodeNotify("workbench.action.navigateRight")<CR>', opts)
 
+-- Use VSCode jumplist
+keymap('n', 'gj', '<Cmd>call VSCodeNotify("workbench.action.navigateBack")<CR>', opts)
+keymap('n', 'gk', '<Cmd>call VSCodeNotify("workbench.action.navigateForward")<CR>', opts)
+
 -- Use VSCode references
 keymap('n', 'gr', '<Cmd>call VSCodeNotify("editor.action.goToReferences")<CR>', opts)
 
