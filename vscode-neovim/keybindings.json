@@ -4,20 +4,7 @@
     "key": "ctrl+alt+j",
     "command": "extension.addDocComments"
   },
-  //NeoVim Escape Keys
-  {
-    "command": "vscode-neovim.compositeEscape1",
-    "key": "j",
-    "when": "neovim.mode == insert && editorTextFocus",
-    "args": "j"
-  },
-  {
-    "command": "vscode-neovim.compositeEscape2",
-    "key": "k",
-    "when": "neovim.mode == insert && editorTextFocus",
-    "args": "k"
-  },
-  {
+   {
     "command": "workbench.action.previousEditor",
     "key": "shift+h",
     "when": "neovim.mode!=insert"
