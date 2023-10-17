@@ -1,10 +1,20 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
+    "command": "search.action.focusNextSearchResult",
+    "key": "ctrl+shift+cmd+alt+j",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "command": "search.action.focusPreviousSearchResult",
+    "key": "ctrl+shift+cmd+alt+k",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
     "key": "ctrl+alt+j",
     "command": "extension.addDocComments"
   },
-   {
+  {
     "command": "workbench.action.previousEditor",
     "key": "shift+h",
     "when": "neovim.mode!=insert"
