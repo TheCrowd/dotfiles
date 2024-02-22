@@ -14,13 +14,6 @@ keymap('n', '<C-u>', '12kzz', opts)
 keymap('n', '<C-f>', '24jzz', opts)
 keymap('n', '<C-b>', '24kzz', opts)
 
--- Do not copy when delete
-keymap('n', 'x', '"_x', opts)
-keymap('n', 'X', '"_X', opts)
-keymap('n', 'd', '"_d', opts)
-keymap('n', 'D', '"_D', opts)
-keymap('n', 'dd', '"_dd', opts)
-
 -- Better window navigation
 keymap('n', '<C-j>', ':call VSCodeNotify("workbench.action.navigateDown")<CR>', opts)
 keymap('x', '<C-j>', ':call VSCodeNotify("workbench.action.navigateDown")<CR>', opts)

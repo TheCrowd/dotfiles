@@ -19,8 +19,12 @@ bind('v', '<', '<gv')
 bind('v', '>', '>gv')
 
 -- Move text up and down
-bind('x', 'J', ":move '>+1<CR>gv-gv")
-bind('x', 'K', ":move '<-2<CR>gv-gv")
+bind('v', '<A-j>', ':MoveBlock(1)<CR>')
+bind('v', '<A-k>', ':MoveBlock(-1)<CR>')
+
+bind('n', '<A-j>', ':MoveLine(1)<CR>')
+bind('n', '<A-k>', ':MoveLine(-1)<CR>')
+
 
 -- TUI/GUI NeoVim only settings
 if not vim.g.vscode then
@@ -31,6 +35,12 @@ if not vim.g.vscode then
 
     -- nvim-tree
     bind('n', '<leader>e', '<CMD>NvimTreeToggle<CR>')
+    -- move
+    bind('v', '<A-j>', ':MoveBlock(1)<CR>')
+    bind('v', '<A-k>', ':MoveBlock(-1)<CR>')
+
+    bind('n', '<A-j>', ':MoveLine(1)<CR>')
+    bind('n', '<A-k>', ':MoveLine(-1)<CR>')
 
     -- Resize with arrows
     bind('n', '<C-Up>', '<CMD>resize +2<CR>')
@@ -43,7 +53,7 @@ if not vim.g.vscode then
     bind('n', '<C-j>', '<C-w>j')
     bind('n', '<C-k>', '<C-w>k')
     bind('n', '<C-l>', '<C-w>l')
-
+    
     -- Telescope
     -- Show key bindings list
     bind('n', '<Leader>?', '<CMD>Telescope keymaps<CR>')

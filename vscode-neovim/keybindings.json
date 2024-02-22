@@ -1,5 +1,17 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
+  {
+    "key": "alt+k",
+    "command": "vscode-neovim.send",
+    "args": "<a-k>",
+    "when": "editorTextFocus && neovim.init"
+  },
+  {
+    "key": "alt+j",
+    "command": "vscode-neovim.send",
+    "args": "<a-j>",
+    "when": "editorTextFocus && neovim.init"
+  },
   {
     "command": "search.action.focusNextSearchResult",
     "key": "ctrl+shift+cmd+alt+j",

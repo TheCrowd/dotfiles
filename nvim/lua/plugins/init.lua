@@ -35,8 +35,17 @@ local plugins = {
     ['rebelot/kanagawa.nvim'] = {
         cond = nocode,
         config = function()
-            require('plugins.configs.kanagawa')
         end
+    },
+ 
+    ['fedepujol/move.nvim'] = {
+    opts = {
+        require('move').setup({})
+        --- Config
+    },
+    config =function()
+        require('move').setup({})
+    end
     },
 
     ['nvim-treesitter/nvim-treesitter'] = {
@@ -83,7 +92,6 @@ local plugins = {
         cond = nocode,
         after = 'nvim-web-devicons',
         config = function()
-            require('plugins.configs.nvimtree')
         end
     },
 
@@ -97,15 +105,7 @@ local plugins = {
     ['lukas-reineke/indent-blankline.nvim'] = {
         cond = nocode,
         config = function()
-            require('plugins.configs.blankline')
-        end
-    },
-
-    ['romgrk/barbar.nvim'] = {
-        cond = nocode,
-        after = {'nvim-tree.lua', 'nvim-web-devicons'},
-        config = function()
-            require('plugins.configs.barbar')
+            require("ibl").setup()
         end
     },
 
@@ -113,7 +113,6 @@ local plugins = {
         cond = nocode,
         after = {'nvim-web-devicons', 'kanagawa.nvim'},
         config = function()
-            require('plugins.configs.lualine')
         end
     },
 
